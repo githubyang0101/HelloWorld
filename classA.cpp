@@ -382,7 +382,7 @@ void Stack::pop()
     free(temp);
 }
 
-int Pmain()
+int main()
 {
     complex c(5, 10);
     c.displaydata();
