@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // edit on the localthird
+=======
+// edit on the remotesecond
+>>>>>>> 71f6358da19bffd1759ed68605971d714e24a3a6
 #include <iostream>
 #include <queue>
 #include <string>
