@@ -1,4 +1,4 @@
-// edit on the localsecond
+// edit on the remotesecond
 #include <iostream>
 #include <queue>
 #include <string>
