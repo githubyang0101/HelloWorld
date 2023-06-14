@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// edit on the localagain
-=======
-// edit on the remotethird
->>>>>>> 0f09fd57f95b5ce413e0470909a2760aa223bbb2
+// edit on the remote
 #include <iostream>
 #include <queue>
 #include <string>
