@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // edit on the remote
+=======
+// edit on the localagainagain
+>>>>>>> e5c5c02 (changed at local)
 #include <iostream>
 #include <queue>
 #include <string>
