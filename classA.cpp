@@ -8,7 +8,9 @@
 #include <set>
 #include <unordered_set>
 #include "string.h"
-
+extern "C"{
+    #include"file.h"
+}
 using namespace std;
 class A
 {
@@ -35,6 +37,15 @@ typedef struct treeNode
     {
     }
 } Node;
+typedef struct treeNode
+{
+    int c;
+    treeNode *left;
+    treeNode *right;
+    treeNode(int num, treeNode *l = NULL, treeNode *r = NULL) : c(num), left(l), right(r)
+    {
+    }
+} NodeInt;
 void preOrder(Node *root)
 {
     if (root == NULL)
@@ -227,6 +238,53 @@ ListNode *reverseList(ListNode *head)
     }
     return pre;
 }
+//参数是否需要const，只要不改变，写成const
+//=运算符重载，首先判断是否是自己给自己赋值
+//析构之后，一般把指针置空
+//拷贝构造函数，复制运算符重载，参数都是引用
+
+class MyString{
+public:
+    MyString()
+    {
+        this->myStr=nullptr;
+    }
+    MyString(const char* st)
+    {
+        int num=strlen(st)+1;
+        this->myStr=new char(num);
+        strcpy(this->myStr,st);
+    }
+    ~MyString()
+    {
+        delete this->myStr;
+        strcpy(this->myStr,"good");
+        //this->myStr=nullptr;
+    }
+    MyString(const MyString& st)
+    {
+        int num=strlen(st.myStr)+1;
+        this->myStr=new char[num];
+        strcpy(this->myStr,st.myStr);
+    }
+    MyString& operator=(const MyString& st){
+        if(this==&st)
+        {
+            return *this;
+        }
+        int num=strlen(st.myStr);
+        delete this->myStr;//if not,memory link this->myStr=nullptr
+        this->myStr=new char[num];
+        strcpy(this->myStr,st.myStr); 
+        return *this; 
+    }
+private:
+    char* myStr;
+};
+// std::string st1("good");
+// std::string st2("morning");
+// std::string st3(st1);//copy constructor
+// st2=st1; //operator
 
 ListNode *reverseLList1(ListNode *head)
 {
@@ -353,6 +411,20 @@ void Stack::push(int data)
     temp->next = top;
     top = temp;
 }
+
+vector<int> preorderTraversal(NodeInt* root) {
+    vector<int> res;
+    res.push_back(1);
+    res.push_back(2);
+    [root,res]
+    {
+        if(root!=nullptr)
+        {
+            //res.push_back(1);
+        }
+        
+    }();
+}
 class complex
 {
 private:
@@ -382,9 +454,34 @@ void Stack::pop()
     top = top->next;
     free(temp);
 }
+class Ax{
+public:
+    virtual int f1(){cout<<"Ax::f1"<<endl;}
+    virtual int f2(){cout<<"Ax::f2"<<endl;}
+};
+class AA:public Ax{
+public:
+    virtual int f1(){cout<<"AA::f1"<<endl;}
+    virtual int f2(){cout<<"AA::f2"<<endl;}
+};
+    #include <sstream>                        // similar to StringBuilder in Java
 
 int main()
 {
+    myfunc();
+    ListNode L1(1,nullptr);
+    ListNode L2(2,nullptr);
+    ListNode L3(3,nullptr);
+    L1.next=&L2;
+    L2.next=&L3;
+    Ax obj2;
+    AA obj3;
+    obj2.f1();
+    obj2.f2();
+    obj3.f1();
+    obj3.f2();
+    Ax* ppp=new AA();
+    ppp->f1();
     complex c(5, 10);
     c.displaydata();
     B obj;
@@ -417,7 +514,26 @@ int main()
     Node CC('c');
     Node AA('a', &BB, &CC);
     root = &AA;
-
+    string strr1="def",strr2="abc"; 
+    cout<<strr1.compare(strr2)<<endl;
     // breadthOrder(root);
     // preOrder(root);
+
+    stringstream ss;
+    string ssx="hello world!";
+    stringstream ream(ssx);
+    string abc;
+    while(ream>>abc){
+        cout<<abc<<endl;
+    }
+    int numm=5;
+    string sstr="76";
+    stoi(sstr);
+    char ch='c';
+    string strrr=string(2,ch);
+    cout<<strrr<<endl;
+    cout<<sstr<<endl;
+    cout<<ream.str()<<endl;
+    ss << "year" << ' ' << 2017;              // accept char, string and number(int, float, double)
+    cout<<ss.str()<<endl;
 }

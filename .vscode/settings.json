@@ -41,6 +41,13 @@
         "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "newbug": "cpp",
+        "stdio.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled",
+    "debug.terminal.clearBeforeReusing": true,
+    "cmake.debugConfig": {
+        
     }
 }

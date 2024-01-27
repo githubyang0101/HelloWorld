@@ -1,0 +1,8 @@
+**/*.o
+*.o
+**/*.exe
+*.exe
+.gitignore
+**/*.json
+s01.cpp
+a.sh
