@@ -7,6 +7,7 @@
 #include <unordered_set>
 #include "string.h"
 using namespace std;
+#include<memory>
 
 
 struct TreeNode {
@@ -53,9 +54,12 @@ vector<int> preorderTraversal(TreeNode* root)
     
 }
 int main() {
+        unique_ptr<TreeNode> p1(new TreeNode(5,nullptr,nullptr));
+        unique_ptr<TreeNode> p2(new TreeNode(6,nullptr,nullptr));
+        cout<<p1->num<<endl;
+        cout<<p2->num<<endl;
         constexpr char* networkDBusService = "xyz.openbmc_project.Network";
-        *networkDBusService = 'z';
-        char *p="xxd";
+        //*networkDBusService = "z";
         auto recursive_lambda = [](int n) {
         if (n <= 0) {
             return 0;
