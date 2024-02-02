@@ -43,7 +43,15 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "newbug": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "bit": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "numbers": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "debug.terminal.clearBeforeReusing": true,
