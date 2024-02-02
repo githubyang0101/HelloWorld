@@ -7,8 +7,6 @@
 #include <algorithm>
 #include<unordered_set>
 #include<string.h>
-#include<memory>
-//#include<memory>
 
 using namespace std;
 
@@ -458,323 +456,98 @@ int main()
     cout<<x<<"xxx";
 }
 */
-// vector<vector<int>> merge(vector<vector<int>>& intervals) {
-//     vector<vector<int>> vec;
-//     for(int i=0;i<intervals.size();i++)
-//     {
-//         sort(intervals.begin(),intervals.end());
-//     }
-//     for(int i=0;i<intervals.size()-1;i++)
-//     {
-//         if(intervals[i+1][0]);
-//     }
-//     return intervals;
-// }
-// void TestVectorTraversor()
-// {
-//     vector<int> array;
-//     array.push_back( 1 );
-//     array.push_back( 2 );
-//     array.push_back( 3 );
-//     for( int i=array.size()-1; i>=0; --i)
-//     {
-//         cout << array[i] << endl;
-//     }
-//     return;
-// }
-// void Get100Memory(char **p)
-// {
-//     *p = new char[100];
-// }
-
-// void TestGetMemory()
-// {
-//     char *str = NULL;
-//     Get100Memory(&str);
-//     strcpy(str,"hello world");
-//     cout << str;
-// }
-// // class Shape
-// // {
-// // public:
-// //     virtual ~Shape()
-// //     {
-// //         if(shapeName!=NULL) {
-// //             delete[] shapeName;
-// //             shapeName=NULL;
-// //         }
-// //     }
-
-// //     Shape(const char* id, const char* name)
-// //     {
-// //         shapeName = new char[strlen(name) + strlen(id)+1];
-// //         memset(shapeName,0,strlen(name) + strlen(id)+1);
-// //         strcpy(shapeName, name);
-// //         strcpy(shapeName + strlen(name), id);
-// //     }
-// //     Shape(const Shape &sh)
-// //     {
-// //         shapeName=new char[strlen(sh.shapeName)+1];
-// //         memset(shapeName,0,strlen(sh.shapeName) +1);
-// //         strcpy(shapeName,sh.shapeName);
-// //     }
-// //     const char * getName()
-// //     {
-// //         return shapeName;
-// //     }
-
-// // private:
-// //     char* shapeName;
-// // };
-
-
-// // void PrintShape(Shape* shape)
-// // {
-// //     cout << "name: " << shape->getName() << endl;
-// // }
-
-// // void TestTheShapeClass()
-// // {
-// //     vector<Shape> shapes;
-// //     Shape s1("1","Rect:");
-// //     Shape s2("2", "Circle: ");
-// //     shapes.push_back(s1);
-// //     shapes.push_back(s2);
-
-// //     for (size_t i = 0; i < shapes.size(); ++i)
-// //     {
-// //         PrintShape(&shapes[i]);
-// //     }
-// //     shapes.clear();    
-// // }
-
-
-// // void test(const int &i)
-// // {
-// //     cout<<i<<endl;
-// // }
-//  //class A
-//  /*template <typename A>
-// class shared_ptr
-// {
-// public:
-//     shared_ptr()
-//     {
-//         data = NULL;
-//         ref_cnt = 0;
-//     }
-//     shared_ptr(A *ptr)
-//     {
-//         data = ptr;
-//         ref_cnt =(1);
-//     }
-//     shared_ptr(const shared_ptr<A> &obj)
-//     {
-//         data = obj.data;
-//        // obj.ref_cnt = obj.ref_cnt + 1;
-//         shared_ptr<A>* obj1=const_cast<shared_ptr<A>*>(&obj);
-//         obj1->ref_cnt++;
-//         ref_cnt = obj.ref_cnt;
-//     }
-//     shared_ptr<A>& operator=(const shared_ptr<A> &obj)
-//     {
-//         if (this == &obj)
-//         return *this;
-//         if (ref_cnt)
-//         {
-//             ref_cnt--;
-//             if (ref_cnt == 0)
-//             delete data;
-//         }
-//         data = obj.data;
-//         shared_ptr<A>* obj1=const_cast<shared_ptr<A>*>(&obj);
-//         obj1->ref_cnt++;
-//         //ref_cnt++;
-//         ref_cnt = obj.ref_cnt;
-//         return *this;
-//     }
-    
-//     ~shared_ptr()
-//     {
-//         cout<<"delete the data"<<ref_cnt<<endl;
-//         ref_cnt--;
-//         if (ref_cnt == 0)
-//         {
-//             //delete ref_cnt;
-//             ref_cnt = 0;
-//             delete data;
-//             data = NULL;
-//         }
-//     }
-
-//     A *get() { return data; }
-
-// private:
-//     int ref_cnt;
-//     A *data;
-// };
-// class Shape
-// {
-// public:
-//     Shape(const char *id, const char *name)
-//     {
-//         char *shapeName1 = new char[strlen(name) + strlen(id) + 1];
-//         strcpy(shapeName1, name);
-//         strcpy(shapeName1 + strlen(name), id);
-//         shapeName = shared_ptr<char>(shapeName1);
-//         shared_ptr<char> sp=shapeName;
-//     }
-//     Shape(const Shape& obj)
-//     {
-//     //char *shapeName = new char[obj.shapeName + 1];
-//     //strcpy(shapeName, obj.shapeName);
-//         shapeName=obj.shapeName;
-//     }
-//     virtual ~Shape()
-//     {
-//     }
-//     const char *getName()
-//     {
-//         return shapeName.get();
-//     }
-
-//     private: shared_ptr<char> shapeName;
-// };
-
-// void PrintShape(Shape *shape, const char** p)
-// {
-//     *p=shape->getName();
-//     cout << "name: " << shape->getName() << endl;
-// }
-// void TestTheShapeClass( const char** p)
-// {
-//     vector<Shape> shapes;
-//     Shape obj("1","Rect");
-//     shapes.push_back(obj);
-//     //shapes.push_back(Shape("2", "Circle: "));
-//     for (size_t i = 0; i < shapes.size(); ++i)
-//     {
-//         PrintShape(&shapes[i], p);
-//     }
-//     shapes.clear();
-// }*/
-// /*int main()
-// {
-//     int rnum=0;
-//     int *goodptr=(int*)malloc(sizeof(int));
-//     int *badptr=nullptr;
-//     srand(time(NULL));
-//     char *s1=(char*)malloc(sizeof(char)*4);
-//     memset(s1,0,4);
-//     cout<<s1<<endl;
-//     char *s2="123";
-//     strcpy(s1,s2);
-//     char* s= strcat(s1,s2);
-//     cout<<s1<<endl;
-//     cout<<s<<";"<<strlen(s)<<endl;
-//     free(s1);
-//     while(true)
-//     {
-//         rnum=rand() % 255;
-//         if(rnum==13)
-//         {
-//             *badptr=rnum;
-//         }else{
-//             *goodptr=rnum;
-//         }
-//         cout<<"random="<<rnum<<endl;
-//         //sleep(100);
-//     }*/
-// /* cout << "Case3: TestTheShapeClass()..." << endl;
-//  const char **p=new const char*;
-//  //*p="chasuhd";
-// //TestTheShapeClass(p);
-// int *pp;
-// cout<<pp<<endl;
-// //printf("%d\n",pp);
-// printf("%p\n",pp);
-// *pp=5;
-//  cout << *pp<< endl;
-//  cerr<<"wrong cout"<<*pp<<endl;
-//  delete p;
-
-//  return 0;
-// }
-//  */
-// /*int main() {
-//    //TestGetMemory();
-//     TestTheShapeClass();
-//     int SIZE = 100; // 错误，企图在类声明中初始化 const 数据成员
-//     int array[SIZE]={0}; // 错误，未知的 SIZE
-//     array;
-//     int i=0;
-//     goto state;
-//     i=5;
-//     cout<<"xxxx"<<endl;
-//     test(5);
-//     state:
-//     cout<<i<<endl;
-//     cout<<EOF<<endl;
-//     /*vector<int> input;
-//     input.push_back(3);
-//     input.push_back(2);
-//     PrintArray("A",input);
-// }*/
-// #include <iostream>
-// #include <string>
-// #include <vector>
-// #include <memory>
-// using namespace std;
-
-// class Person {
-// public:
-//     string name;
-//     shared_ptr<Person> mother;
-//     shared_ptr<Person> father;
-//     vector<shared_ptr<Person>> kids;
-
-//     Person(const string& n,
-//         shared_ptr<Person> m = nullptr,
-//         shared_ptr<Person> f = nullptr)
-//         : name(n), mother(m), father(f) {
-//     }
-
-//     ~Person() {
-//         cout << "delete " << name << endl;
-//     }
-// };
-
-// shared_ptr<Person> initFamily(const string& name)
-// {
-//     shared_ptr<Person> mom(new Person(name + "'s mom"));
-//     shared_ptr<Person> dad(new Person(name + "'s dad"));
-//     shared_ptr<Person> kid(new Person(name, mom, dad));
-//     //以下是为了统计引用次数
-//     cout << "1 mom is shared " << mom.use_count() << " times" << endl;
-//     cout << "1 dad is shared " << dad.use_count() << " times" << endl;
-//     cout << "1 kid is shared " << kid.use_count() << " times" << endl;
-//     mom->kids.push_back(kid);
-//     dad->kids.push_back(kid);
-//     cout << "mom is shared " << mom.use_count() << " times" << endl;
-//     cout << "dad is shared " << dad.use_count() << " times" << endl;
-//     cout << "kid is shared " << kid.use_count() << " times" << endl;
-//     return kid;
-// }
-template<class A,class B> A sum(A T1,B T2);
-int sum(int,double)
-{
-    return 0;
+vector<vector<int>> merge(vector<vector<int>>& intervals) {
+    vector<vector<int>> vec;
+    for(int i=0;i<intervals.size();i++)
+    {
+        sort(intervals.begin(),intervals.end());
+    }
+    for(int i=0;i<intervals.size()-1;i++)
+    {
+        if(intervals[i+1][0]);
+    }
+    return intervals;
 }
-int main()
+void TestVectorTraversor()
 {
-    /*shared_ptr<Person> p = initFamily("nico");
+    vector<int> array;
+    array.push_back( 1 );
+    array.push_back( 2 );
+    array.push_back( 3 );
+    for( int i=array.size()-1; i>=0; --i)
+    {
+        cout << array[i] << endl;
+    }
+    return;
+}
+void Get100Memory(char **p)
+{
+    *p = new char[100];
+}
 
-    cout << "nico's family exists" << endl;
-    cout << "- nico is shared " << p.use_count() << " times" << endl;
-    cout << "- name of 1st kid of nico's mom: "
-        << p->mother->kids[0]->name << endl;*/
-    sum(3,5.0);/*
-    p = initFamily("jim");
-    cout << "jim's family exists" << endl;*/
-    return 0;
+void TestGetMemory()
+{
+    char *str = NULL;
+    Get100Memory(&str);
+    strcpy(str,"hello world");
+    cout << str;
+}
+class Shape
+{
+public:
+    Shape(const char* id, const char* name)
+    {
+        shapeName = new char[strlen(name) + strlen(id)];
+        strcpy(shapeName, name);
+        strcpy(shapeName + strlen(name), id);
+    }
+    Shape(const Shape &sh)
+    {
+        shapeName=new char[strlen(sh.shapeName)];
+        strcpy(shapeName,sh.shapeName);
+    }
+    virtual ~Shape()
+    {
+        delete shapeName;
+    }
+
+    const char * getName()
+    {
+        return shapeName;
+    }
+
+private:
+    char* shapeName;
+};
+
+
+void PrintShape(Shape* shape)
+{
+    cout << "name: " << shape->getName() << endl;
+}
+
+void TestTheShapeClass()
+{
+    vector<Shape> shapes;
+    shapes.push_back(Shape("1", "Rect: "));
+    shapes.push_back(Shape("2", "Circle: "));
+
+    for (size_t i = 0; i < shapes.size(); ++i)
+    {
+        PrintShape(&shapes[i]);
+    }
+
+    shapes.clear();    
+}
+
+
+
+int main() {
+   //TestGetMemory();
+    TestTheShapeClass();
+    /*vector<int> input;
+    input.push_back(3);
+    input.push_back(2);
+    PrintArray("A",input);*/
+
 }

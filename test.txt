@@ -1,0 +1,9 @@
+a.sh
+bin
+classA.cpp
+s01 copy.cpp
+s01.cpp
+s01.tar
+test.txt
+testignore.txt
+Mon, Jan  1, 2024  8:45:06 PM
