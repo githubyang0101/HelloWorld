@@ -12,6 +12,8 @@ extern "C"{
     #include"file.h"
 }
 //merge test in remote
+//merge test local
+//amend test
 using namespace std;
 class A
 {
