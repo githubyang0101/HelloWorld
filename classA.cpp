@@ -11,6 +11,7 @@
 extern "C"{
     #include"file.h"
 }
+//merge test in local
 using namespace std;
 class A
 {
