@@ -13,7 +13,6 @@ extern "C"{
 }
 //merge test in remote
 //merge test local
-//amend test
 using namespace std;
 class A
 {
